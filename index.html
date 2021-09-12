@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>360 Degree View</title>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.7.1/aframe.min.js"></script>
+	<style>
+	.aframebox {
+height: 500px;
+width: 500px;
+}
+	</style>
+</head>
+<body>
+	<a-scene class="aframebox" embedded>
+		<img id="panorama" src="small_cathedral_4k.jpg"/>
+		<a-sky src="#panorama" rotation="0 -90 0">
+		    <a-animation attribute="rotation" fill="forwards" easing="linear" dur="15000" from="0 0 0" to="0 360 0" repeat="indefinite"></a-animation>
+		</a-sky>
+	</a-scene>
+</body>
+</html>
